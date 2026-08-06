@@ -9,10 +9,12 @@ const notes = [
 {
     image: "assets/images/first-message.jpg",
 
-    text: `
+    text: "",
+
+    message: `
     <p class="personal-message">
-    عوم و اتمخطر 🌊<br>
-    <span>— دوري —</span>
+        عوم و اتمخطر 🌊<br>
+        <span>— دوري —</span>
     </p>
     `
 },
@@ -126,20 +128,11 @@ localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
 noteImage.src = selectedNote.image;
 noteImage.style.display = "block";
 
-// عرض الرسالة
-noteImage.src = selectedNote.image;
-noteImage.style.display = "block";
+// عرض نص الرسالة
+noteText.innerHTML = selectedNote.text || "";
 
-noteText.innerHTML = selectedNote.text;
-
+// عرض الرسالة الشخصية (لو موجودة)
 noteMessage.innerHTML = selectedNote.message || "";
-}
-
-
-document.getElementById("backBtn").onclick = function(){
-
-    noteCard.style.display = "none";
-    homeCard.style.display = "block";
 
 }
 
