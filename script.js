@@ -34,20 +34,6 @@ const notes = [
 },
 
 {
-    image: "assets/images/image2.jpg",
-
-    text: `
-    الرب نوري وخلاصي ممن أخاف؟<br><br>
-
-    الرب حصن حياتي ممن أرتعب؟<br><br>
-
-    <span class="verse">
-    (مزمور ٢٧ : ١) ✨
-    </span>
-    `
-
-
-{
     image: "assets/images/second-message.jpg",
 
     text: `
@@ -137,7 +123,7 @@ usedNotes.push(selectedIndex);
 localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
 
 // عرض الصورة
-noteImage.src = "assets/images/first-message.jpg";
+noteImage.src = selectedNote.image;
 noteImage.style.display = "block";
 
 // عرض الرسالة
@@ -146,7 +132,7 @@ noteImage.style.display = "block";
 
 noteText.innerHTML = selectedNote.text;
 
-noteMessage.innerHTML = selectedNote.message;
+noteMessage.innerHTML = selectedNote.message || "";
 }
 
 
