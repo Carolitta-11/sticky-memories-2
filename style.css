@@ -1,1 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cairo", sans-serif;
+    background: #d2dbb8;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Main Welcome Card */
+.welcome-card {
+    width: 100%;
+    max-width: 470px;
+    padding: 55px 35px 45px;
+    border-radius: 22px;
+    background: #ffef9c;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Pin Element */
+.pin {
+    width: 24px;
+    height: 24px;
+    background: #ff7fa8;
+    border-radius: 50%;
+    margin: 0 auto 35px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.pin::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background: #777;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 18px;
+    border-radius: 4px;
+}
+
+.welcome-card h1 {
+    color: #332511;
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.welcome-card p {
+    color: #2e1b0e;
+    font-size: 22px;
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+/* Divider Element */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0 25px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    max-width: 110px;
+    border-bottom: 2px dashed #f3b9b9;
+}
+
+.divider span {
+    margin: 0 15px;
+    color: #ff86b5;
+    font-size: 20px;
+}
+
+/* Primary Button */
+button {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    background: #ff8cab;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 125, 165, 0.35);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff769c;
+    transform: translateY(-3px);
+}
+
+/* Note Card */
+.note-card {
+    display: none;
+    width: 100%;
+    max-width: 430px; /* استخدام max-width بدلاً من width الثابت */
+    background: #FFF8B8;
+    padding: 40px;
+    border-radius: 18px;
+    transform: rotate(2deg);
+    box-shadow: 0 18px 40px rgba(176, 167, 125, .25);
+    text-align: center;
+    animation: fadeIn .5s;
+    direction: rtl;
+}
+
+.note-card h2 {
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.note-card p {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#noteText {
+    direction: rtl;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+    font-size: 24px;
+    line-height: 2;
+}
+
+/* Animated Background Blobs */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.9;
+    animation: float 10s ease-in-out infinite;
+}
+
+.blob1 {
+    width: 420px;
+    height: 420px;
+    background: #c7adec;
+    top: -120px;
+    left: -120px;
+}
+
+.blob2 {
+    width: 350px;
+    height: 350px;
+    background: #90e7e1;
+    top: 120px;
+    right: -100px;
+}
+
+.blob3 {
+    width: 300px;
+    height: 300px;
+    background: #ffe675;
+    bottom: -80px;
+    left: 180px;
+}
+
+.blob4 {
+    width: 380px;
+    height: 380px;
+    background: #b3e89c;
+    bottom: -120px;
+    right: -100px;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(.8) rotate(5deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(2deg);
+    }
+}
+
+/* ==========================================
+   Responsive Styles for Mobile Devices
+========================================== */
+@media (max-width: 576px) {
+    .overlay {
+        padding: 15px; /* تقليل البادنج قليلاً للشاشات الصغيرة جداً */
+    }
+
+    .welcome-card {
+        padding: 40px 20px 30px;
+        border-radius: 18px;
+    }
+
+    .welcome-card h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .welcome-card p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    /* تعديل كارت الملاحظة للموبايل */
+    .note-card {
+        padding: 25px 18px;
+    }
+
+    .note-card p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    #noteText {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .pin {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 25px;
+    }
+
+    .pin::after {
+        width: 6px;
+        height: 16px;
+        top: 15px;
+    }
+
+    .divider span {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .divider::before,
+    .divider::after {
+        max-width: 60px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+
+    /* Scale down blobs for smaller viewports */
+    .blob1 { width: 250px; height: 250px; top: -60px; left: -60px; }
+    .blob2 { width: 220px; height: 220px; top: 60px; right: -50px; }
+    .blob3 { width: 180px; height: 180px; bottom: -40px; left: 40px; }
+    .blob4 { width: 220px; height: 220px; bottom: -60px; right: -50px; }
+}
 
