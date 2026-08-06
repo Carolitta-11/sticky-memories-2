@@ -135,4 +135,9 @@ noteText.innerHTML = selectedNote.text || "";
 noteMessage.innerHTML = selectedNote.message || "";
 
 }
+document.getElementById("backBtn").onclick = function(){
 
+    noteCard.style.display = "none";
+    homeCard.style.display = "block";
+
+}
