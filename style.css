@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Patrick+Hand&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
 body {
     margin: 0;
@@ -120,11 +120,15 @@ button:hover {
     transform: translateY(-3px);
 }
 
+button:active {
+    transform: scale(0.98);
+}
+
 /* Note Card */
 .note-card {
     display: none;
     width: 100%;
-    max-width: 430px; /* استخدام max-width بدلاً من width الثابت */
+    max-width: 430px;
     background: #FFF8B8;
     padding: 40px;
     border-radius: 18px;
@@ -153,6 +157,35 @@ button:hover {
     font-family: "Cairo", sans-serif;
     font-size: 24px;
     line-height: 2;
+}
+
+#noteImage {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+#noteMessage, .personal-message {
+    margin-top: 20px;
+    font-family: "Patrick Hand", cursive;
+    font-size: 28px;
+    color: #5d4a3b;
+    line-height: 1.8;
+}
+
+.personal-message span {
+    font-size: 22px;
+}
+
+.message-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
 }
 
 /* Animated Background Blobs */
@@ -196,7 +229,7 @@ button:hover {
     right: -100px;
 }
 
-/* Floating Animation */
+/* Animations */
 @keyframes float {
     0%, 100% {
         transform: translateY(0px);
@@ -217,12 +250,10 @@ button:hover {
     }
 }
 
-/* ==========================================
-   Responsive Styles for Mobile Devices
-========================================== */
+/* Responsive Styles */
 @media (max-width: 576px) {
     .overlay {
-        padding: 15px; /* تقليل البادنج قليلاً للشاشات الصغيرة جداً */
+        padding: 15px;
     }
 
     .welcome-card {
@@ -240,7 +271,6 @@ button:hover {
         margin-bottom: 25px;
     }
 
-    /* تعديل كارت الملاحظة للموبايل */
     .note-card {
         padding: 25px 18px;
     }
@@ -284,57 +314,8 @@ button:hover {
         border-radius: 12px;
     }
 
-    /* Scale down blobs for smaller viewports */
     .blob1 { width: 250px; height: 250px; top: -60px; left: -60px; }
     .blob2 { width: 220px; height: 220px; top: 60px; right: -50px; }
     .blob3 { width: 180px; height: 180px; bottom: -40px; left: 40px; }
     .blob4 { width: 220px; height: 220px; bottom: -60px; right: -50px; }
-}
-#noteImage{
-
-    width:100%;
-
-    max-height:280px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-    margin-bottom:20px;
-
-    display:none;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-}
-#noteMessage{
-
-    margin-top:20px;
-
-    font-family:"Patrick Hand", cursive;
-
-    font-size:28px;
-
-    color:#5d4a3b;
-
-    line-height:1.8;
-
-}
-.message-image{
-    width:100%;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.personal-message{
-    margin-top:20px;
-    font-family:"Patrick Hand", cursive;
-    font-size:26px;
-    color:#5d4a3b;
-    line-height:1.8;
-}
-
-.personal-message span{
-    font-size:22px;
 }
