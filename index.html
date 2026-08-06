@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sticky Memories</title>
 
@@ -78,7 +78,7 @@
             transform: scale(0.98);
         }
 
-        /* تحسين خلفية الـ Blobs للشاشات الصغيرة */
+        /* Blob Background Improvements */
         .blob {
             position: absolute;
             filter: blur(40px);
@@ -112,11 +112,10 @@
         <div class="note-card" id="noteCard" style="display: none;">
             <div class="pin"></div>
             <h2>Today's Note 💛</h2>
-          <img id="noteImage" src="" alt="Message Image">
+            <img id="noteImage" alt="Message Image" style="display: none;">
 
-<p id="noteText"></p>
-
-<p id="noteMessage"></p>
+            <p id="noteText"></p>
+            <p id="noteMessage"></p>
             <button id="backBtn">Back</button>
         </div>
 
@@ -128,4 +127,3 @@
 </body>
 
 </html>
-
