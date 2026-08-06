@@ -320,3 +320,21 @@ button:hover {
     line-height:1.8;
 
 }
+.message-image{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.personal-message{
+    margin-top:20px;
+    font-family:"Patrick Hand", cursive;
+    font-size:26px;
+    color:#5d4a3b;
+    line-height:1.8;
+}
+
+.personal-message span{
+    font-size:22px;
+}
