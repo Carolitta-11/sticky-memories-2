@@ -1,3 +1,4 @@
+const noteImage = document.getElementById("noteImage");
 const homeCard = document.getElementById("homeCard");
 const noteCard = document.getElementById("noteCard");
 const noteText = document.getElementById("noteText");
