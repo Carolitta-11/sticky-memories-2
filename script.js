@@ -41,27 +41,20 @@ document.getElementById("openNote").onclick = function() {
   homeCard.style.display = "none";
   noteCard.style.display = "block";
 
-  // جلب الرسائل التي ظهرت سابقاً
   let usedNotes = JSON.parse(localStorage.getItem("usedNotes")) || [];
 
-  // لو كل الرسائل ظهرت نبدأ من جديد
   if (usedNotes.length === notes.length) {
     usedNotes = [];
   }
 
-  // عمل قائمة بالرسائل المتبقية فقط
   let availableNotes = notes.filter((note, index) => !usedNotes.includes(index));
-
-  // اختيار رسالة عشوائية من المتبقي
   let randomIndex = Math.floor(Math.random() * availableNotes.length);
   let selectedNote = availableNotes[randomIndex];
 
-  // معرفة رقم الرسالة الأصلية وحفظها
   let selectedIndex = notes.indexOf(selectedNote);
   usedNotes.push(selectedIndex);
   localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
 
-  // عرض البيانات
   noteImage.src = selectedNote.image;
   noteImage.style.display = "block";
   noteText.innerHTML = selectedNote.text || "";
