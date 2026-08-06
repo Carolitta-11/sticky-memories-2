@@ -83,13 +83,18 @@ document.getElementById("openNote").onclick = function(){
 
     let selectedNote = availableNotes[randomIndex];
 
-    // معرفة رقم الرسالة الأصلية وحفظها
-    let selectedIndex = notes.indexOf(selectedNote);
-    usedNotes.push(selectedIndex);
+   // معرفة رقم الرسالة الأصلية وحفظها
+let selectedIndex = notes.indexOf(selectedNote);
+usedNotes.push(selectedIndex);
 
-    localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
+localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
 
-    noteText.innerHTML = selectedNote;
+// عرض الصورة
+noteImage.src = "assets/images/first-message.jpg";
+noteImage.style.display = "block";
+
+// عرض الرسالة
+noteText.innerHTML = selectedNote;
 }
 
 
