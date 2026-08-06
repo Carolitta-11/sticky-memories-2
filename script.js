@@ -5,59 +5,106 @@ const noteCard = document.getElementById("noteCard");
 const noteText = document.getElementById("noteText");
 
 const notes = [
-`
-لا تخف لأني معك.<br><br>
 
-لا تتلفت لأني إلهك.<br><br>
+{
+    image: "assets/images/first-message.jpg",
 
-قد أيدتك وأعنتك وعضدتك بيمين بري.<br><br>
+    text: `
+    <p class="personal-message">
+    عوم و اتمخطر 🌊<br>
+    <span>— دوري —</span>
+    </p>
+    `
+},
 
-<span class="verse">
-(إشعياء ٤١ : ١٠) 🌼
-</span>
-`,
+{
+    image: "assets/images/image1.jpg",
 
-`
-الرب نوري وخلاصي ممن أخاف؟<br><br>
+    text: `
+    لا تخف لأني معك.<br><br>
 
-الرب حصن حياتي ممن أرتعب؟<br><br>
+    لا تتلفت لأني إلهك.<br><br>
 
-<span class="verse">
-(مزمور ٢٧ : ١) ✨
-</span>
-`,
+    قد أيدتك وأعنتك وعضدتك بيمين بري.<br><br>
 
-`
+    <span class="verse">
+    (إشعياء ٤١ : ١٠) 🌼
+    </span>
+    `
+},
 
-<p class="personal-message">
-عوم و اتمخطر 🌊<br>
-<span>— دوري —</span>
-</p>
-`,
+{
+    image: "assets/images/image2.jpg",
 
-`
-أستطيع كل شيء في المسيح الذي يقويني.<br><br>
+    text: `
+    الرب نوري وخلاصي ممن أخاف؟<br><br>
 
-<span class="verse">
-(فيلبي ٤ : ١٣) 🤍
-</span>
-`,
+    الرب حصن حياتي ممن أرتعب؟<br><br>
 
-`
-سلّم للرب طريقك واتكل عليه وهو يجري.<br><br>
+    <span class="verse">
+    (مزمور ٢٧ : ١) ✨
+    </span>
+    `
 
-<span class="verse">
-(مزمور ٣٧ : ٥) 🌿
-</span>
-`,
 
-`
-أنا معكم كل الأيام إلى انقضاء الدهر.<br><br>
+{
+    image: "assets/images/second-message.jpg",
 
-<span class="verse">
-(متى ٢٨ : ٢٠) 🕊️
-</span>
-`
+    text: `
+    الرب نوري وخلاصي ممن أخاف؟<br><br>
+
+    الرب حصن حياتي ممن أرتعب؟<br><br>
+
+    <span class="verse">
+    (مزمور ٢٧ : ١) ✨
+    </span>
+    `,
+
+    message: ""
+},
+
+{
+    image: "assets/images/third-message.jpg",
+
+    text: `
+    أستطيع كل شيء في المسيح الذي يقويني.<br><br>
+
+    <span class="verse">
+    (فيلبي ٤ : ١٣) 🤍
+    </span>
+    `,
+
+    message: ""
+},
+
+{
+    image: "assets/images/fourth-message.jpg",
+
+    text: `
+    سلّم للرب طريقك واتكل عليه وهو يجري.<br><br>
+
+    <span class="verse">
+    (مزمور ٣٧ : ٥) 🌿
+    </span>
+    `,
+
+    message: ""
+},
+
+{
+    image: "assets/images/fifth-message.jpg",
+
+    text: `
+    أنا معكم كل الأيام إلى انقضاء الدهر.<br><br>
+
+    <span class="verse">
+    (متى ٢٨ : ٢٠) 🕊️
+    </span>
+    `,
+
+    message: ""
+}
+
 ];
 
 document.getElementById("openNote").onclick = function(){
@@ -94,7 +141,12 @@ noteImage.src = "assets/images/first-message.jpg";
 noteImage.style.display = "block";
 
 // عرض الرسالة
-noteText.innerHTML = selectedNote;
+noteImage.src = selectedNote.image;
+noteImage.style.display = "block";
+
+noteText.innerHTML = selectedNote.text;
+
+noteMessage.innerHTML = selectedNote.message;
 }
 
 
