@@ -25,6 +25,11 @@ const notes = [
 <span class="verse">
 (مزمور ٢٧ : ١) ✨
 </span>
+
+<p class="personal-message">
+عوم و اتمخطر 🌊<br>
+<span>— دوري —</span>
+</p>
 `,
 
 `
