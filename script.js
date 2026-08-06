@@ -41,24 +41,36 @@ document.getElementById("openNote").onclick = function() {
   homeCard.style.display = "none";
   noteCard.style.display = "block";
 
+  // جلب العناصر المخزنة
   let usedNotes = JSON.parse(localStorage.getItem("usedNotes")) || [];
 
-  if (usedNotes.length === notes.length) {
+  // إذا تم عرض كل الرسائل، تفريغ الذاكرة لإعادتها من جديد
+  if (usedNotes.length >= notes.length) {
     usedNotes = [];
+    localStorage.removeItem("usedNotes");
   }
 
-  let availableNotes = notes.filter((note, index) => !usedNotes.includes(index));
-  let randomIndex = Math.floor(Math.random() * availableNotes.length);
-  let selectedNote = availableNotes[randomIndex];
+  // تصفية الرسائل المتاحة
+  let availableIndexes = notes
+    .map((_, index) => index)
+    .filter(index => !usedNotes.includes(index));
 
-  let selectedIndex = notes.indexOf(selectedNote);
+  // اختيار مؤشر عشوائي
+  let randomIndex = Math.floor(Math.random() * availableIndexes.length);
+  let selectedIndex = availableIndexes[randomIndex];
+  let selectedNote = notes[selectedIndex];
+
+  // حفظ الرسالة المختارة
   usedNotes.push(selectedIndex);
   localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
 
-  noteImage.src = selectedNote.image;
-  noteImage.style.display = "block";
-  noteText.innerHTML = selectedNote.text || "";
-  noteMessage.innerHTML = selectedNote.message || "";
+  // عرض البيانات بثبات
+  if (selectedNote) {
+    noteImage.src = selectedNote.image;
+    noteImage.style.display = "block";
+    noteText.innerHTML = selectedNote.text || "";
+    noteMessage.innerHTML = selectedNote.message || "";
+  }
 };
 
 document.getElementById("backBtn").onclick = function() {
