@@ -307,3 +307,16 @@ button:hover {
     box-shadow:0 8px 20px rgba(0,0,0,.15);
 
 }
+#noteMessage{
+
+    margin-top:20px;
+
+    font-family:"Patrick Hand", cursive;
+
+    font-size:28px;
+
+    color:#5d4a3b;
+
+    line-height:1.8;
+
+}
