@@ -171,7 +171,7 @@ button:active {
 
 #noteMessage, .personal-message {
     margin-top: 20px;
-    font-family: "Patrick Hand", cursive;
+    font-family: "Patrick Hand", "Cairo", cursive;
     font-size: 28px;
     color: #5d4a3b;
     line-height: 1.8;
@@ -195,6 +195,8 @@ button:active {
     filter: blur(50px);
     opacity: 0.9;
     animation: float 10s ease-in-out infinite;
+    will-change: transform; /* تحسين أداء الحركة على الشاشات */
+    pointer-events: none;
 }
 
 .blob1 {
