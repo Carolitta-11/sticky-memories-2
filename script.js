@@ -7,8 +7,8 @@ const noteText = document.getElementById("noteText");
 const notes = [
   {
     image: "assets/images/naruto.jpeg",
-    text: "",
-    message: `<p class="personal-message">Perseverance beats Talent.<br><span>— NARUTO —</span></p>`
+    text: `<p class="personal-message">Perseverance beats Talent✨.<br><span>— NARUTO —</span>`,
+    message: ""
   },
   {
     image: "assets/images/image1.jpg",
