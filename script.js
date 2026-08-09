@@ -11,27 +11,37 @@ const notes = [
     message: ""
   },
   {
-    image: "assets/images/image1.jpg",
+    image: "assets/images/jesus.jpeg",
     text: `لا تخف لأني معك.<br><br>لا تتلفت لأني إلهك.<br><br>قد أيدتك وأعنتك وعضدتك بيمين بري.<br><br><span class="verse">(إشعياء ٤١ : ١٠) 🌼</span>`,
     message: ""
   },
   {
-    image: "assets/images/second-message.jpg",
+    image: "assets/images/avakerollos.jpeg",
+    text: `<p class="personal-message">ثق أن الرب أحن عليك من نفسك فأن طلبته تجده.<br><span>— البابا كيرلس السادس —</span>`,
+    message: ""
+  },
+  {
+    image: "assets/images/lord.jpeg",
     text: `الرب نوري وخلاصي ممن أخاف؟<br><br>الرب حصن حياتي ممن أرتعب؟<br><br><span class="verse">(مزمور ٢٧ : ١) ✨</span>`,
     message: ""
   },
   {
-    image: "assets/images/third-message.jpg",
+    image: "assets/images/khokha.jpeg",
+    text: `<p class="personal-message">صباح الخير..اليوم الموعود ، الشمس طالعة و الحوض نظيف..✨.<br><span>— خوخة —</span>`,
+    message: ""
+  },
+  {
+    image: "assets/images/ican.jpeg",
     text: `أستطيع كل شيء في المسيح الذي يقويني.<br><br><span class="verse">(فيلبي ٤ : ١٣) 🤍</span>`,
     message: ""
   },
   {
-    image: "assets/images/fourth-message.jpg",
+    image: "assets/images/godhand.jpeg",
     text: `سلّم للرب طريقك واتكل عليه وهو يجري.<br><br><span class="verse">(مزمور ٣٧ : ٥) 🌿</span>`,
     message: ""
   },
   {
-    image: "assets/images/fifth-message.jpg",
+    image: "assets/images/god.jpeg",
     text: `أنا معكم كل الأيام إلى انقضاء الدهر.<br><br><span class="verse">(متى ٢٨ : ٢٠) 🕊️</span>`,
     message: ""
   }
