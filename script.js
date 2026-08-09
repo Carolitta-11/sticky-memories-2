@@ -6,9 +6,9 @@ const noteText = document.getElementById("noteText");
 
 const notes = [
   {
-    image: "assets/images/first-message.jpg",
+    image: "assets/images/naruto.jpeg",
     text: "",
-    message: `<p class="personal-message">عوم و اتمخطر 🌊<br><span>— دوري —</span></p>`
+    message: `<p class="personal-message"Perseverance beats Talent.<br><span>— NARUTO —</span></p>`
   },
   {
     image: "assets/images/image1.jpg",
