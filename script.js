@@ -8,7 +8,8 @@ const notes = [
   {
     image: "assets/images/naruto.jpeg",
     text: "",
-    message: `<p class="personal-message"Perseverance beats Talent.<br><span>— NARUTO —</span></p>`
+    // تم إغلاق وسم الـ p بشكل صحيح هنا
+    message: `<p class="personal-message">Perseverance beats Talent.<br><span>— NARUTO —</span></p>`
   },
   {
     image: "assets/images/image1.jpg",
@@ -41,30 +42,26 @@ document.getElementById("openNote").onclick = function() {
   homeCard.style.display = "none";
   noteCard.style.display = "block";
 
-  // جلب العناصر المخزنة
   let usedNotes = JSON.parse(localStorage.getItem("usedNotes")) || [];
 
-  // إذا تم عرض كل الرسائل، تفريغ الذاكرة لإعادتها من جديد
   if (usedNotes.length >= notes.length) {
     usedNotes = [];
     localStorage.removeItem("usedNotes");
   }
 
-  // تصفية الرسائل المتاحة
   let availableIndexes = notes
     .map((_, index) => index)
     .filter(index => !usedNotes.includes(index));
 
-  // اختيار مؤشر عشوائي
   let randomIndex = Math.floor(Math.random() * availableIndexes.length);
   let selectedIndex = availableIndexes[randomIndex];
   let selectedNote = notes[selectedIndex];
 
-  // حفظ الرسالة المختارة
-  usedNotes.push(selectedIndex);
-  localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
+  if (selectedIndex !== undefined) {
+    usedNotes.push(selectedIndex);
+    localStorage.setItem("usedNotes", JSON.stringify(usedNotes));
+  }
 
-  // عرض البيانات بثبات
   if (selectedNote) {
     noteImage.src = selectedNote.image;
     noteImage.style.display = "block";
