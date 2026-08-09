@@ -8,7 +8,6 @@ const notes = [
   {
     image: "assets/images/naruto.jpeg",
     text: "",
-    // تم إغلاق وسم الـ p بشكل صحيح هنا
     message: `<p class="personal-message">Perseverance beats Talent.<br><span>— NARUTO —</span></p>`
   },
   {
