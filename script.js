@@ -56,7 +56,7 @@ const notes = [
     message: ""
   },
    {
-    image: "assets/images/note.png",
+    image: "assets/images/note.jpg",
     text: `<p class="personal-message">QUICK REMINDER.<br><span>— 🤍 —</span>`,
     message: ""
   },
