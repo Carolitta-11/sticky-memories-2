@@ -41,6 +41,26 @@ const notes = [
     message: ""
   },
   {
+    image: "assets/images/hakuna.jpeg",
+    text: `<p class="personal-message">انساه و المستقبل اديه كل التركيز🤩 .<br><span>— HAKUNA MATATA —</span>`,
+    message: ""
+  },
+  {
+    image: "assets/images/flower.jpeg",
+    text: `<p class="personal-message">You aren't responsible for fixing everything that’s broken,take a break 🤍.<br><span>— REMINDER —</span>`,
+    message: ""
+  },
+  {
+    image: "assets/images/follow.jpeg",
+    text: `<p class="personal-message">TRUST GOD, AND YOU 💛.<br><span>— REMINDER —</span>`,
+    message: ""
+  },
+   {
+    image: "assets/images/note.png",
+    text: `<p class="personal-message">QUICK REMINDER.<br><span>— 🤍 —</span>`,
+    message: ""
+  },
+  {
     image: "assets/images/god.jpeg",
     text: `أنا معكم كل الأيام إلى انقضاء الدهر.<br><br><span class="verse">(متى ٢٨ : ٢٠) 🕊️</span>`,
     message: ""
